@@ -1,0 +1,10 @@
+解决SecureCRT连接linux超时后断开[转]：
+方法一：
+从客户端入手
+	将设置中的Terminal中的send protocol NO-OP选中  
+	
+方法二:
+从服务器入手
+		修改/etc/ssh/sshd_config配置文件 ClientAliveInterval 300（默认为0）
+	这个参数的是意思是每5分钟，服务器向客户端发一个消息，用于保持连接
+	service sshd reload 生效
