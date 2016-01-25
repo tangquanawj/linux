@@ -1,0 +1,15 @@
+查看mysql是否在运行：ps aux|grep mysqld
+
+查看具体的详细信息 ： mysql -uroot -p -e"show status\G" ,执行命令之后，输入mysql密码之后即可。
+
+查看nginx安装目录、版本号信息：ps -ef|grep nginx
+
+安装php5的步骤：
+    第一步：sudo apt-get update
+    第二部：sudo apt-get install php5 选择y确定即可
+  
+vim三种编辑模式：i insert
+			普通模式：默认是普通模式
+			查看模式：v virtual进行多行的选择
+			复制命令：y  复制的意思
+			粘贴命令:p paste
