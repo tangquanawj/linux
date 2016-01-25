@@ -59,5 +59,6 @@ unrar e file.rar //解压rar
 unzip file.zip //解压zip
 
 压缩的英文：compress
-总结到一个规律：压缩文件不用-v
-				解压缩文件一定要用到-v
+总结到一个规律：
+		压缩文件不用-v
+		解压缩文件一定要用到-v
