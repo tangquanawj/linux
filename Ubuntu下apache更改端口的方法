@@ -1,0 +1,12 @@
+step1：修改监听端口以及主机端口为8080
+       sudo vi /etc/apache2/ports.conf 
+       修改其中的listen后面的数字为8080
+	
+step2: 只要修改virtualHost的端口即可
+	/etc/apache2/sites-enabled# vim 000-default.conf我的是这个文件
+	修改其中的<VirtualHost *:8080> 
+step3：重启apache2
+	sudo service apache2 stop  
+	sudo service apache2 start  
+	
+	然后的我的服务器nginx用80的端口号 apache用的是8080的端口号
