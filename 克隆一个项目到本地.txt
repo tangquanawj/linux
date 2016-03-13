@@ -1,0 +1,2 @@
+git clone git@github.com/tangquanawj/linux
+从我的github里面克隆了linux这个文件夹下来
