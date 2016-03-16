@@ -1,0 +1,15 @@
+Ubuntu中文输入法IBUS的安装:
+sudo apt-get install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
+启动IBus框架，在终端输入：
+im-switch -s ibus
+安装完IBus框架后注销系统，保证更改立即生效。
+第三步：安装拼音引擎
+ 
+有下面几种常用选择：
+IBus拼音：sudo apt-get install ibus-pinyin
+IBUS五笔：sudo apt-get install ibus-table-wubi
+谷歌拼音输入法：sudo apt-get install ibus-googlepinyin
+Sun拼音输入法：sudo apt-get install ibus-sunpinyin
+第四步：设置IBus框架  
+ibus-setup
+设置IBUS
