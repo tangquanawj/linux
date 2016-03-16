@@ -1,0 +1,7 @@
+第一步当然是打开终端控制器。有很多方法，这里推荐使用快捷键：ctrl+alt+T。快捷又方便。
+
+然后更新源列表，使用如下命令：sudo apt-get update，后面要输入密码。
+
+然后就是真正的更新flashplayer的环节了，输入命令：sudo apt-get install flashplugin-installer，然后按回车键。
+
+也可以在ubuntu自带的软件中心安装

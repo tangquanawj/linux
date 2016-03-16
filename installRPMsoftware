@@ -1,0 +1,8 @@
+在Ubuntu中，软件是用deb格式的文件安装的，而一些适用于Linux的软件是其他格式的文件，例如是“.rpm”格式的，这些软件无法直接在ubuntu中安装，需要进行格式转换才行。下面举例说明格式转换的具体操作。
+      1、首先安装格式转换工具。在终端输入“sudo apt-get install alien”，按终端提示操作即可完成转换工具的安装。
+ 2、安装好转换工具后就可以进行格式转换了。例如我要安装“AdobeReader_chs-8.3.1.7-1.i486.rpm”，在下载时不用做任何处理按“确定”即可。
+        3、对下载完成的文件进行格式转换。下载完成后可在“文件系统”中的“tmp”文件夹中找到刚才下载的文件
+“AdobeReader_chs-8.3.1.7-1.i486.rpm”。在终端输入“sudo alien --scripts  /(存放文件的位置)/(文件名)，回车执行命令，回答密码即开始进行格式转换。
+ 4、转换完成后可在主文件夹中找到转换后的“.deb”软件包了，点击即可进行安装了。
+
+ You may face the problem:you can type: "sudo alien --help" for further imformation
