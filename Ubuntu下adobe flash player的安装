@@ -1,0 +1,3 @@
+1、打开adobe flash player的官网下载tar.gz的文件
+2、解压文件后，将文件中的.so文件放在/usr/lib/mozilla/plugins/下
+3、重启浏览器即可使用。
