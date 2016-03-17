@@ -1,0 +1,22 @@
+1.本篇经验分四步：下载JDK 下载eclipse  安装JDK  安装eclipse
+2.解压 jdk
+3.要对profile进行配置：输入命令:sodu vim /etc/profile 
+4.Input your password
+5.这一步是重中之重！
+  1）添加JAVA_HOME路径：
+  export JAVA_HOME=/xxx/xxxx/jdk1.7.0_60
+  该目录是你JDK解压后的目录，比如小编，解压后的目录为：
+  /opt/software/java/jdk1.7.0_60
+  所以小编的路径为：
+  export JAVA_HOME=/opt/software/java/jdk_1.7.0_60
+  2)添加JRE路径
+  小编的为：
+  export JRE_HOME=/opt/software/java/jdk_1.7.0_60/jre
+  3)配置CLASSPATH路径
+  export CLASSPATH=.:$CLASSPATH:$JAVA_HOME/lib:$JRE_HOME/lib
+  4）配置PATH路径
+  export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
+6.Aftering pressing Esc,shift + : +wq    to store and quit.
+7.OK，让刚才的配置生效 输入命令：source /etc/profile
+8.Using "java -versino" to indentify your installing.
+
