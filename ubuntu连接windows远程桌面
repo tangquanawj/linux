@@ -1,0 +1,24 @@
+用rdeasktop来远程连接windows：
+1.sudo apt-get install rdesktop
+2.rdesktop 124.42.120.174 -g 800x600
+
+其他参数
+-f 全屏
+-a 16位色
+默认端口是3389（linux 22 sh）
+注意：windows 的服务中的 Terminal Servies 需要开启。我的电脑 右键 属性 远程中，勾选 允许远程用户链接到此计算机。另外，退出的时候选择注销，而不是关机！
+
+更多参数：
+-u xxxxxx 登录用户，可选
+-p xxxxxx 登录密码，可选
+-r clipboard:PRIMARYCLIPBOARD 重要，剪贴板可以与远程桌面交互
+-a 16 颜色，可选，不过最高就是16位
+-z 压缩，可选
+-g 1024x768 分辨率，可选，缺省是一种比当前本地桌面低的分辨率
+-P 缓冲，可选
+-r disk:wj=/home/magicgod 映射虚拟盘，可选，会在远程机器的网上邻居里虚拟出一个映射盘，功能很强，甚至可以是软盘或光盘
+-r sound:off 关闭声音，当然也可以把远程发的声音映射到本地来。
+
+例：rdesktop -f 192.168.0.184 -u Test3 -p 2013@Miqilai    全屏，直接输入用户名和密码
+
+rdesktop退出全屏模式 ：使用组合键ctrl+alt+enter进行切换。
