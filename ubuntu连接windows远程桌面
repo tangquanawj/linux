@@ -3,7 +3,7 @@
 2.rdesktop 124.42.120.174 -g 800x600
 
 其他参数
--f 全屏
+-f 全屏  ctrl+alt+enter quit
 -a 16位色
 默认端口是3389（linux 22 sh）
 注意：windows 的服务中的 Terminal Servies 需要开启。我的电脑 右键 属性 远程中，勾选 允许远程用户链接到此计算机。另外，退出的时候选择注销，而不是关机！
