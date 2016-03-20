@@ -1,0 +1,5 @@
+哈哈,请不要惊慌.这是Git 找不到你要提交的版本了.
+
+那请试试
+
+git push origin master
