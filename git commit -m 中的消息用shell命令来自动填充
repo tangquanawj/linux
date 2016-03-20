@@ -1,0 +1,3 @@
+git commit -m "`date`"
+可以用date作为git commit提交的消息
+还可以根据date一些参数选择date的形式
