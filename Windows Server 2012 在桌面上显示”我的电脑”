@@ -1,0 +1,5 @@
+如果是在Windows Server 2012本地控制台下，直接按Win（键盘上的微软徽标键）+R，输入：
+
+rundll32.exe shell32.dll,Control_RunDLL desk.cpl,,0
+
+回车后，勾选所需要的桌面图标的名称，确定即可。
