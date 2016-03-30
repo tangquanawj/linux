@@ -1,0 +1,8 @@
+第一步:找到开源项目的地址:sudo git clone https://github.com/joyent/node.git
+第二步：修改目录的权限 一般是755权限.chmod 755 -R node       
+        -R的意思是修改目录及以下所有文件
+第三步：使用./configure来创建编译文件
+第四步：执行make进行编译
+第五步：完成编译。 sudo make install 
+
+查看node.js是否安装成功。
