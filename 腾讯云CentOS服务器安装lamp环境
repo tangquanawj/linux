@@ -33,3 +33,5 @@ mysqladmin -u root password "XXXXXXXX"
 chmod -R 777 /var/www/html
 
 转自：http://bbs.qcloud.com/thread-1316-1-1.html
+
+PS：一定要设置安全组开放全部端口
