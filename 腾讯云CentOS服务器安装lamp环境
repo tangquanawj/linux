@@ -1,0 +1,35 @@
+yum install -y httpd php php-fpm mysql mysql-server php-mysql
+
+service httpd start
+service mysqld start
+service php-fpm start
+
+这时，我们的环境已经基本搭建好了，大家已经可以在浏览器中访问服务器的外网ip，可以看到apache的测试页面，就说明你已经成功了。为了保险起见，也建议大家进入到apache的web根目录：/var/www/html 中自己写一个最简单的php页面
+
+cd /var/www/html
+touch test.php
+vi test.php 进入到了控制模式之后再摁下键盘字母 i 进入到编辑模式，将如下代码复制粘贴到编辑模式中
+<?php
+echo "<title>Test Page</title>";
+phpinfo()
+?>
+
+然后在编辑模式下摁键盘 esc 退出编辑模式，回到控制模式，在控制模式下摁键盘 : (冒号 shift+;)，再输入wq 然后回车。可以再执行 cat test.php 命令，看到下图情况说明test.php文件已经编辑成功
+
+最后20%问题来自mysql的简单配置：
+mysqladmin -u root password "XXXXXXXX"
+
+4、上传下载好的discuz论坛代码
+
+这里如果各位嫌FTP麻烦，推荐使用winscp软件上传(可以参考官网wiki文档)，将代码上传到服务器的apache web根目录下，即/var/www/html 下。 如何使用winscp软件这里不再赘述了。
+
+
+
+将目录赋予相应权限
+
+这些目录文件上传到服务器之后，默认只有root用户才有写权限，所以我们还要将写权限赋予给其他用户
+
+
+chmod -R 777 /var/www/html
+
+转自：http://bbs.qcloud.com/thread-1316-1-1.html
