@@ -1,0 +1,37 @@
+现象：
+在CentOS（64bit）平台，无法使用root用户进行登录；
+
+mysql -u root -p
+
+ERROR 1045(28000): Access denied for user 'root'@'localhost'(using password: YES)
+
+ 1、 停掉MySQL服务：
+
+   /etc/init.d/mysqld stop
+
+2、使用safe模式，进行重启：
+
+   mysqld_safe --skip-grant-tables   这一步执行完之后光标会一直闪烁，需要重开一个终端执行下一个操作。
+   
+3、使用root账户，无密码登录：
+
+  mysql -u root
+
+4、选择mysql database:
+
+  use mysql;
+
+5、为root用户更改密码为： 123456（自行设定）：
+
+  update user set password=PASSWORD("123456") where User = 'root';
+6、停止MySQL 服务：
+
+/etc/init.d/mysqld stop
+
+重新启动MySQL服务：
+
+/etc/init.d/mysqld start
+
+使用root账户正常登录：
+
+mysql -u root -p
