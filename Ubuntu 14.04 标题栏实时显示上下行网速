@@ -1,0 +1,18 @@
+首先当然是用wget下载indicator-sysmonitor，终端执行命令：wget -c https://launchpad.net/indicator-sysmonitor/trunk/4.0/+download/indicator-sysmonitor_0.4.3_all.deb 。
+下载好后，先不要急于安装，因为软件有些依赖关系还没解决。终端执行：sudo apt-get install python python-psutil python-appindicator 安装依赖。sudo dpkg -i indicator-sysmonitor_0.4.3_all.deb 安装indicator-sysmonitor 。
+
+这样要安装的都安装好了，但是还需要进行一些配置，才能正常显示。由于软件默认显示图标是 sysmonitor.svg，而在 Ubuntu 14.04 64位系统中没有这个图标，这导致图标显示错误，很不美观。于是要把软件默认使用的图标改成一个存在的图标，当然也可以自己动手制作一个图标。但是系统中已经有很多图标了，找个好点的直接用上就行！
+系统图标存放在：/usr/share/icons/Humanity/apps/ XX目录下（XX 为：128 16 192 22 24 32 48 64 中任一个，对应同一图标的不同尺寸，同一图标并不是每个尺寸都有）。打开/usr/share/icons/Humanity/apps/32 ，发现application-community.svg 还不错，所以我就用这个图标了！当然用其他的或者自己制作也是可以的！
+找到喜欢的图标后，记下图标的文件名（不包括后缀），这里是 application-community，下面开始进行替换。终端执行命令：sudo gedit /usr/bin/indicator-sysmonitor
+将 724 行的 sysmonitor 改为刚才记下的 application-community
+
+改好后保存，终端执行： indicator-sysmonitor ，运行下indicator-sysmonitor，看下图标效果，效果很不错！                                                                                                                                                                    
+勾上Run on startup:， 这样就能开机启动了。切换到 Advanced 选项，可以对要显示到标题栏的信息进行设置。
+我只想让它显示网速，所以Customize output: 中只有 {net}，可以选中Sensors项，再点击添加(A)，添加其他要显示的项目，有些项目似乎显示不太对。也可自己在 Customize output: 中按格式输入。
+例如输入：cpu: {cpu} mem: {mem} net:{net} ，然后点击 Test
+再例如输入：CPU:{cpu} 内存:{mem} 网速:{net} ，然后点击 Test
+可以尝试设置其他格式，再Test，直到效果满意再点击 保存。
+
+
+
+好了，到此就结束了！
