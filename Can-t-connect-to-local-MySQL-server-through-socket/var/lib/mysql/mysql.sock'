@@ -1,0 +1,2 @@
+这种情况是没有启动mysql造成的  
+service mysqld start即可
