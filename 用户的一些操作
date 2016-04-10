@@ -1,0 +1,13 @@
+加用户：useradd <someuser>
+加密码：passwd <someuser>
+删用户：userdel <someuser>
+
+实际例子：
+[root@zhglxt ~]# useradd mydear
+[root@zhglxt ~]# passwd mydear
+Changing password for user mydear.
+New UNIX password:
+BAD PASSWORD: it is based on a dictionary word
+Retype new UNIX password:
+passwd: all authentication tokens updated successfully.
+[root@zhglxt ~]# userdel mydear 
