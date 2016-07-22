@@ -1,0 +1,30 @@
+CentOS 6.5上默认安装PHP 5.3。因为后台网站无法正确运行在PHP 5.3上，
+所以计划将PHP升级到开发平台一样的版本PHP 5.5。为了方便，我们采用YUM的方式升级PHP
+
+1、在更新PHP之前，先查看下当前PHP版本，避免重复的更新
+# php -v
+
+2、检查当前PHP的安装包
+# yum list installed | grep php
+
+3、移除当前PHP的安装包，否则容易起冲突
+# yum remove php*
+
+4、由于默认的YUM源无法升级PHP，所以需要添加第三方的YUM源，此处用到webtatic。
+因为是CentOS 6.5，所以用以下URL
+# rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
+如果是CentOS 7.x
+rpm -Uvh https://mirror.webtatic.com/yum/el7/epel-release.rpm 
+rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+
+5、 查看YUM源上能用PHP安装包
+＃ yum list php*
+
+6、安装PHP5.5及需要的扩展
+# yum install php55w php55w-devel php55w-common php55w-mysql php55w-pdo php55w-opacache php55w-xml
+
+7、再次查看PHP版本，以确认安装是否成功
+# php -v
+
+8、对了，如果你的PHP要用到Redis，请别忘了安装php-redis 扩展
+＃ yum install php-redis
