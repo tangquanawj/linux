@@ -1,3 +1,5 @@
+http://www.cnblogs.com/beanmoon/p/3387652.html
+
 1 在安装完debian操作系统之后大家做的第一件事大概就是修改source.list文件了吧，否则你是无法在线更新软件的，那么source.list文件中的各个配置项的具体含义你搞懂了么？下面就以我的source.list文件为例为大家讲解一下。
 
 deb http://mirrors.163.com/debian/ wheezy main non-free contrib
