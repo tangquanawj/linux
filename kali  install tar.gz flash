@@ -1,0 +1,6 @@
+1.download tar.gz adobe flash player
+
+2.tar-xzvf ***.tar.gz
+
+3.cp  ***.so /usr/lib/iceweasel
+  cp  ***.so /usr/lib/mozilla/plugins
