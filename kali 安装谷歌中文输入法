@@ -1,0 +1,22 @@
+#转载于http://www.cnblogs.com/dunitian/p/4712323.html
+
+1.kali默认是没有中午输入法的，需要自己安装一下
+
+2.首先我们先获取root权限
+
+dnt@HackerKali:~$ su
+密码：
+
+3.安装中文输入法（apt-get 指令不会的同学可以学习一下基础指令哦）
+
+root@HackerKali:/home/dnt# apt-get install fcitx
+
+4.安装谷歌输入法
+
+root@HackerKali:/home/dnt# apt-get install fcitx-googlepinyin
+
+5.安装完成后没有什么变化，重启一下
+
+root@HackerKali:/home/dnt# reboot
+
+6.开机后就可以按住 ctrl 来回切换了（kali 2.0是按 ctrl+空格）
