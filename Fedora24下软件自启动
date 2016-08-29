@@ -20,7 +20,7 @@
     fi
     # User specific environment and startup programs
     PATH=$PATH:$HOME/.local/bin:$HOME/bin
-    conky &
+    sleep 10 && conky &
     export PATH
     
   这样就可以实现conky的自启动  
