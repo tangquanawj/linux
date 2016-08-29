@@ -1,0 +1,26 @@
+修改.bash_profile，在其中添加相应代码即可实现自启动
+1.    .bash_profile这个文件在~目录下    属于隐藏文件
+  默认的文件代码是：
+  # .bash_profile
+  # Get the aliases and functions
+    if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+    fi
+    # User specific environment and startup programs
+    PATH=$PATH:$HOME/.local/bin:$HOME/bin
+    
+    export PATH
+
+2.在path中添加相应代码即可实现开机自启动
+  如：
+    # .bash_profile
+  # Get the aliases and functions
+    if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+    fi
+    # User specific environment and startup programs
+    PATH=$PATH:$HOME/.local/bin:$HOME/bin
+    conky &
+    export PATH
+    
+  这样就可以实现conky的自启动  
