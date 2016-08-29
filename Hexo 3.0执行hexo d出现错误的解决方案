@@ -1,0 +1,4 @@
+ npm install hexo-deployer-git --save
+ 
+ 
+ 执行这段语句即可解决
