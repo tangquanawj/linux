@@ -1,0 +1,18 @@
+一：使用hostname命令
+[root@test ~]# hostname yourname
+这样只是临时更改了主机名。
+二：修改linux主机的配置文件/etc/sysconfig/network 和 /etc/hosts
+1.修改/etc/sysconfig/network里面的主机名字。
+# vi /etc/sysconfig/network
+NETWORKING=yes
+HOSTNAME=yourname //在这修改hostname
+GATEWAY=192.168.1.1 //你的IP地址
+2.修改/etc/hosts里面的名字
+# vi /etc/hosts
+127.0.0.1 localhost.localdomain localhost
+192.168.1.121 yourname //在这修改hostname //你的IP地址
+//有时候只有这一行
+127.0.0.1 yourname localhost.localdomain localhost
+3.让更改的名字在不重启机器下生效
+# hostname yourname
+# su
